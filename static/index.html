@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeBhaiya - AI & Machine Learning Powerhouse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .code-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Top Ribbon -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 flex items-center justify-between">
+    <div class="flex items-center gap-2 max-w-7xl mx-auto w-full">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> PyTorch & Scikit-Learn Engines Live
+      </span>
+      <span class="hidden md:inline text-slate-400">|</span>
+      <span class="hidden md:inline text-slate-300 font-medium">UN SDG 4: Quality Education &bull; Tier-2/3 Student Upskilling & Placement Engine</span>
+      <span class="ml-auto text-[11px] font-semibold text-slate-400">Lead Architect: <strong class="text-white">Sumit Kumar</strong></span>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-black shadow-md shadow-indigo-100">
+          <i class="fa-solid fa-brain text-base"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-slate-900">Code<span class="text-indigo-600">Bhaiya</span> <span class="text-xs px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-bold border border-indigo-200">ML v2.0</span></span>
+          <p class="text-[10px] text-slate-500 font-medium">High-Impact AI & ML Mentor for Engineering Students</p>
+        </div>
+      </div>
+
+      <!-- Quick Nav Buttons -->
+      <nav class="flex items-center space-x-1 sm:space-x-2">
+        <button onclick="switchTab('predictor-tab')" id="tab-btn-predictor" class="tab-btn px-3 py-1.5 text-xs font-bold rounded-lg transition bg-indigo-600 text-white flex items-center gap-1.5">
+          <i class="fa-solid fa-chart-line"></i> Placement ML Predictor
+        </button>
+        <button onclick="switchTab('pytorch-tab')" id="tab-btn-pytorch" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg transition text-slate-600 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-network-wired text-orange-500"></i> PyTorch Neural Net
+        </button>
+        <button onclick="switchTab('debugger-tab')" id="tab-btn-debugger" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg transition text-slate-600 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-code text-blue-500"></i> AI Debugger & AST
+        </button>
+        <button onclick="switchTab('interview-tab')" id="tab-btn-interview" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg transition text-slate-600 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-microphone text-purple-500"></i> NLP Interview Scorer
+        </button>
+        <button onclick="switchTab('blueprint-tab')" id="tab-btn-blueprint" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-lg transition text-slate-600 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-file-pdf text-red-500"></i> Lean Canvas
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ======================================================== -->
+    <!-- MODULE 1: REAL SCIKIT-LEARN PLACEMENT & SALARY PREDICTOR -->
+    <!-- ======================================================== -->
+    <div id="predictor-tab" class="tab-content">
+      
+      <!-- Header banner -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 mb-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800 uppercase tracking-wider">Scikit-Learn Random Forest</span>
+            <span class="text-xs text-slate-400">&bull;</span>
+            <span class="text-xs font-semibold text-slate-600">Trained on 2,000+ Indian Placement Profiles</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900">AI Placement Probability & Salary (CTC) Predictor</h1>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Apni current details sliders se select karo — real Random Forest & Gradient Boosting model aapki selection probability aur expected package predict karega.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="setProfilePreset('beginner')" class="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg border border-slate-200">2nd Year Beginner</button>
+          <button onclick="setProfilePreset('average')" class="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg border border-slate-200">3rd Year Average</button>
+          <button onclick="setProfilePreset('pro')" class="px-2.5 py-1 text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg border border-indigo-200">Final Year Pro</button>
+        </div>
+      </div>
+
+      <!-- Sliders + Live Output Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: Interactive Sliders (6 cols) -->
+        <div class="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-5">
+          <h3 class="font-extrabold text-slate-900 text-sm pb-3 border-b border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-indigo-600"></i> Student Academic & Coding Parameters
+          </h3>
+
+          <!-- CGPA Slider -->
+          <div>
+            <div class="flex justify-between items-center text-xs mb-1.5">
+              <span class="font-bold text-slate-700">College CGPA:</span>
+              <span id="val-cgpa" class="font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">7.8</span>
+            </div>
+            <input type="range" id="input-cgpa" min="5.5" max="10.0" step="0.1" value="7.8" oninput="updatePrediction()" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1"><span>5.5</span><span>7.5 (Avg)</span><span>10.0</span></div>
+          </div>
+
+          <!-- DSA Problems Solved -->
+          <div>
+            <div class="flex justify-between items-center text-xs mb-1.5">
+              <span class="font-bold text-slate-700">DSA & Coding Questions Solved:</span>
+              <span id="val-dsa" class="font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">140</span>
+            </div>
+            <input type="range" id="input-dsa" min="0" max="450" step="10" value="140" oninput="updatePrediction()" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1"><span>0 (None)</span><span>150 (TCS/Wipro Ready)</span><span>400+ (Product Ready)</span></div>
+          </div>
+
+          <!-- Projects Built -->
+          <div>
+            <div class="flex justify-between items-center text-xs mb-1.5">
+              <span class="font-bold text-slate-700">Full-Stack / AI Projects Built:</span>
+              <span id="val-projects" class="font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">2</span>
+            </div>
+            <input type="range" id="input-projects" min="0" max="5" step="1" value="2" oninput="updatePrediction()" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+          </div>
+
+          <!-- Internships Done -->
+          <div>
+            <div class="flex justify-between items-center text-xs mb-1.5">
+              <span class="font-bold text-slate-700">Industrial Internships:</span>
+              <span id="val-internships" class="font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">1</span>
+            </div>
+            <input type="range" id="input-internships" min="0" max="3" step="1" value="1" oninput="updatePrediction()" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+          </div>
+
+          <!-- Active Backlogs -->
+          <div>
+            <div class="flex justify-between items-center text-xs mb-1.5">
+              <span class="font-bold text-slate-700">Active College Backlogs:</span>
+              <span id="val-backlogs" class="font-extrabold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-100">0</span>
+            </div>
+            <input type="range" id="input-backlogs" min="0" max="3" step="1" value="0" oninput="updatePrediction()" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-rose-600">
+          </div>
+
+        </div>
+
+        <!-- Right: Real-time ML Prediction Dashboard (6 cols) -->
+        <div class="lg:col-span-6 flex flex-col gap-4">
+          
+          <!-- Big KPI Cards -->
+          <div class="grid grid-cols-2 gap-4">
+            
+            <div class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-2xl p-5 text-white shadow-md">
+              <span class="text-xs text-indigo-300 font-semibold uppercase tracking-wider block">Placement Probability</span>
+              <div class="flex items-baseline gap-1 mt-2">
+                <span class="text-4xl sm:text-5xl font-black text-white" id="res-prob">88.5</span>
+                <span class="text-xl font-bold text-indigo-300">%</span>
+              </div>
+              <p class="text-[11px] text-indigo-200/80 mt-2 font-medium" id="res-tier">Tier-2 Dream Company</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-900 to-indigo-950 rounded-2xl p-5 text-white shadow-md">
+              <span class="text-xs text-purple-300 font-semibold uppercase tracking-wider block">Expected CTC (Salary)</span>
+              <div class="flex items-baseline gap-1 mt-2">
+                <span class="text-4xl sm:text-5xl font-black text-white" id="res-salary">7.8</span>
+                <span class="text-lg font-bold text-purple-300">LPA</span>
+              </div>
+              <p class="text-[11px] text-purple-200/80 mt-2 font-medium" id="res-range">₹6.5 - 9.2 LPA</p>
+            </div>
+
+          </div>
+
+          <!-- Feature Importance Chart (Real Scikit-Learn Weights) -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center justify-between mb-3">
+              <span>Explainable AI: What Matters Most?</span>
+              <span class="text-[10px] text-slate-400 font-normal">Feature Weights (%)</span>
+            </h4>
+
+            <div class="space-y-2.5" id="feature-bars-container">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- AI Action Plan -->
+          <div class="bg-amber-50/70 border border-amber-200 rounded-2xl p-4 shadow-sm">
+            <h4 class="text-xs font-bold text-amber-900 flex items-center gap-1.5 mb-1.5">
+              <i class="fa-solid fa-bolt text-amber-600"></i> Bhaiya's What-If Action Plan (Next Steps to Level Up):
+            </h4>
+            <ul class="text-xs text-amber-950 space-y-1 list-disc list-inside font-medium" id="res-action-plan">
+              <li>Loading recommendations...</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODULE 2: LIVE PYTORCH NEURAL NETWORK PLAYGROUND          -->
+    <!-- ======================================================== -->
+    <div id="pytorch-tab" class="tab-content hidden">
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 mb-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-800 uppercase tracking-wider">PyTorch Live Compute</span>
+            <span class="text-xs text-slate-400">&bull;</span>
+            <span class="text-xs font-semibold text-slate-600">Real Deep Learning Training Loop</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900">Live PyTorch Neural Network Trainer</h1>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Backend me actual <strong>torch.nn</strong> execution chalti hai! Button dabate hi neural network synthetic dataset par backpropagation aur loss gradient descent calculate karta hai.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div>
+            <label class="text-[10px] font-bold text-slate-500 uppercase block">Epochs:</label>
+            <select id="pt-epochs" class="text-xs font-bold bg-slate-100 border border-slate-300 rounded px-2.5 py-1">
+              <option value="10">10 Epochs</option>
+              <option value="20" selected>20 Epochs</option>
+              <option value="30">30 Epochs</option>
+            </select>
+          </div>
+          <button onclick="trainPyTorchModel()" id="btn-train-pt" class="px-4 py-2 text-xs font-bold bg-orange-600 hover:bg-orange-700 text-white rounded-xl shadow-md shadow-orange-100 transition flex items-center gap-1.5 self-end">
+            <i class="fa-solid fa-play"></i> Train Neural Net Live
+          </button>
+        </div>
+      </div>
+
+      <!-- Training Visualizer Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: Model Architecture & Status (5 cols) -->
+        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+          <h3 class="font-extrabold text-slate-900 text-sm pb-2 border-b border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-microchip text-orange-600"></i> Model Architecture & Weights
+          </h3>
+
+          <div class="bg-slate-900 text-slate-200 p-4 rounded-xl code-font text-xs space-y-1.5">
+            <p class="text-orange-400 font-bold"># PyTorch Sequential Architecture:</p>
+            <p>nn.Linear(in_features=2, out_features=8)</p>
+            <p class="text-emerald-400">nn.ReLU()</p>
+            <p>nn.Linear(in_features=8, out_features=4)</p>
+            <p class="text-emerald-400">nn.ReLU()</p>
+            <p>nn.Linear(in_features=4, out_features=1)</p>
+            <p class="text-indigo-400">nn.Sigmoid()</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+              <span class="text-[10px] text-slate-500 font-bold uppercase">Final Loss (BCE)</span>
+              <p class="text-xl font-extrabold text-slate-900 mt-1" id="pt-loss-res">--</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+              <span class="text-[10px] text-slate-500 font-bold uppercase">Final Accuracy</span>
+              <p class="text-xl font-extrabold text-emerald-600 mt-1" id="pt-acc-res">--</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-xs font-bold text-slate-700 block mb-1">Sample Learned Weights (Layer 1 Tensor):</span>
+            <pre class="bg-slate-100 p-2.5 rounded-lg code-font text-[11px] text-slate-800 overflow-x-auto" id="pt-weights-res">[Click Train to view weights]</pre>
+          </div>
+
+        </div>
+
+        <!-- Right: Epoch Progress & Loss History (7 cols) -->
+        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col">
+          <h3 class="font-extrabold text-slate-900 text-sm pb-2 border-b border-slate-100 flex items-center justify-between">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-chart-area text-orange-600"></i> Epoch Loss Convergence History</span>
+            <span class="text-xs text-slate-400 font-normal" id="pt-status-text">Ready to train</span>
+          </h3>
+
+          <div class="mt-4 flex-grow overflow-y-auto max-h-[360px] custom-scrollbar space-y-2 pr-1" id="pt-history-container">
+            <div class="p-8 text-center text-slate-400 text-xs">
+              Click <strong>"Train Neural Net Live"</strong> to trigger real PyTorch SGD/Adam backpropagation.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODULE 3: VERNACULAR AI DEBUGGER + AST CODE ANALYZER     -->
+    <!-- ======================================================== -->
+    <div id="debugger-tab" class="tab-content hidden">
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 mb-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800 uppercase tracking-wider">Python AST + Hinglish AI</span>
+            <span class="text-xs text-slate-400">&bull;</span>
+            <span class="text-xs font-semibold text-slate-600">Syntax Tree Parsing & Complexity Rating</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900">AI Code Debugger & AST Tree Analyzer</h1>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Code paste karo: Python ka <strong>Abstract Syntax Tree (AST)</strong> complexity analyse karega aur Bhaiya aapko <strong>Hinglish me desi analogy</strong> ke sath bug fix karke denge.
+          </p>
+        </div>
+        <!-- Presets -->
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <span class="text-xs font-bold text-slate-400">Presets:</span>
+          <button onclick="loadSample('indexerror')" class="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 rounded border border-slate-200">IndexError</button>
+          <button onclick="loadSample('shape')" class="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 rounded border border-slate-200">Matrix Shape</button>
+          <button onclick="loadSample('indent')" class="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-slate-200 rounded border border-slate-200">Indentation</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Code Editor & AST Card (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+            <div class="bg-slate-100/90 px-4 py-2 border-b border-slate-200 flex items-center justify-between text-xs">
+              <span class="font-bold text-slate-700 flex items-center gap-1.5"><i class="fa-solid fa-code text-indigo-600"></i> Python Code Editor</span>
+              <span id="ast-badge" class="px-2 py-0.5 rounded font-bold text-[10px] bg-slate-200 text-slate-700">AST: Unchecked</span>
+            </div>
+            
+            <textarea id="code-input" rows="10" class="w-full p-4 code-font text-xs sm:text-sm bg-slate-950 text-slate-100 focus:outline-none resize-y" placeholder="# Yahan apna code paste karo...
+students = ['Aman', 'Priya', 'Rahul']
+for i in range(len(students) + 1):
+    print(students[i])"></textarea>
+
+            <div class="p-3 bg-slate-50 border-t border-slate-200">
+              <input type="text" id="error-input" class="w-full px-3 py-1.5 text-xs code-font bg-white border border-slate-300 rounded-lg focus:outline-none" placeholder="Optional error (e.g. IndexError: list index out of range)">
+            </div>
+
+            <div class="p-3 bg-white border-t border-slate-200 flex items-center justify-between">
+              <button onclick="runCode()" id="btn-run" class="px-3.5 py-1.5 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg border border-slate-300 transition">
+                <i class="fa-solid fa-play text-emerald-600"></i> Run in Sandbox
+              </button>
+              <button onclick="debugAndAnalyzeCode()" id="btn-debug" class="px-5 py-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow-sm transition">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Bhaiya, Error Samjhao!
+              </button>
+            </div>
+          </div>
+
+          <!-- Sandbox output -->
+          <div class="bg-slate-900 rounded-xl p-4 text-xs code-font text-emerald-400 max-h-36 overflow-y-auto">
+            <span class="text-slate-500 font-bold block mb-1">TERMINAL OUTPUT:</span>
+            <pre id="console-output">Click 'Run in Sandbox' to execute live.</pre>
+          </div>
+        </div>
+
+        <!-- Right: Explanation Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div id="debug-result-card" class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+            
+            <div class="pb-3 border-b border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-rose-600 uppercase" id="diag-type">Diagnosis Ready</span>
+                <h3 class="font-extrabold text-slate-900 text-sm mt-0.5" id="diag-title">Awaiting Code Submission</h3>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-slate-400 block">Cyclomatic Complexity</span>
+                <span class="text-sm font-extrabold text-indigo-600" id="diag-complexity">--</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold text-slate-700 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-question text-amber-500"></i> Galti Kahan Hai:</h4>
+              <p class="text-xs text-slate-600 bg-amber-50/60 p-3 rounded-lg border border-amber-100 leading-relaxed" id="diag-expl">
+                Code daal kar button dabayein.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold text-slate-700 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-yellow-500"></i> Bhaiya's Desi Analogy:</h4>
+              <p class="text-xs text-indigo-950 font-medium bg-indigo-50/70 p-3 rounded-lg border border-indigo-100 leading-relaxed italic" id="diag-analogy">
+                ...
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold text-slate-700 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Corrected Code:</h4>
+              <pre class="bg-slate-900 text-emerald-300 p-3 rounded-lg text-xs code-font overflow-x-auto" id="diag-code"># Fixed code will appear here</pre>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODULE 4: NLP TECHNICAL INTERVIEW SCORER (TF-IDF)        -->
+    <!-- ======================================================== -->
+    <div id="interview-tab" class="tab-content hidden">
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 mb-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800 uppercase tracking-wider">TF-IDF & Cosine NLP</span>
+            <span class="text-xs text-slate-400">&bull;</span>
+            <span class="text-xs font-semibold text-slate-600">Semantic Cosine Distance against Gold Standard</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900">NLP Technical Interview Scorer</h1>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Real Scikit-Learn TF-IDF vectorizer aapke answer ko senior Google/TCS candidate ke gold standard answer se mathematically compare karke semantic score nikalta hai.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+          <div>
+            <label class="text-xs font-bold text-slate-600 block mb-1">Choose Question Topic:</label>
+            <select id="nlp-topic" class="w-full text-xs font-bold bg-slate-50 border border-slate-300 rounded-lg p-2.5">
+              <option value="overfitting">Machine Learning: What is Overfitting and how do you prevent it?</option>
+              <option value="supervised">ML Basics: Supervised vs Unsupervised Learning with practical examples</option>
+              <option value="transformer">Deep Learning: How does Transformer Self-Attention work?</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-slate-600 block mb-1">Aapka Answer (Type your technical explanation):</label>
+            <textarea id="nlp-answer-input" rows="8" class="w-full p-3 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:outline-none" placeholder="Overfitting occurs when model learns noise in training data. To prevent it we use L1/L2 regularization, dropout, pruning and cross validation..."></textarea>
+          </div>
+
+          <div class="flex justify-end">
+            <button onclick="scoreNLPInterview()" id="btn-nlp-score" class="px-5 py-2 text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white rounded-xl shadow-sm transition">
+              <i class="fa-solid fa-chart-pie"></i> Calculate TF-IDF Semantic Score
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+          <h3 class="font-extrabold text-slate-900 text-sm pb-2 border-b border-slate-100 flex items-center justify-between">
+            <span>Semantic Cosine Evaluation</span>
+            <span id="nlp-verdict-badge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600">Pending</span>
+          </h3>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-purple-50 p-3 rounded-xl border border-purple-100">
+              <span class="text-[10px] font-bold text-purple-700 uppercase">Cosine Similarity</span>
+              <p class="text-2xl font-black text-purple-900 mt-1" id="nlp-sim-res">-- %</p>
+            </div>
+            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+              <span class="text-[10px] font-bold text-indigo-700 uppercase">Interview Score</span>
+              <p class="text-2xl font-black text-indigo-900 mt-1" id="nlp-score-res">-- / 10</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-xs font-bold text-slate-700 block mb-1">Matched Key Technical Terms:</span>
+            <div class="flex flex-wrap gap-1.5" id="nlp-matched-chips">
+              <span class="text-[11px] text-slate-400">None yet</span>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-xs font-bold text-slate-700 block mb-1">Missing Technical Concepts:</span>
+            <div class="flex flex-wrap gap-1.5" id="nlp-missing-chips">
+              <span class="text-[11px] text-slate-400">None yet</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODULE 5: LEAN CANVAS BLUEPRINT                          -->
+    <!-- ======================================================== -->
+    <div id="blueprint-tab" class="tab-content hidden">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+          <div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-800 uppercase">Approved Blueprint</span>
+            <h1 class="text-xl font-extrabold text-slate-900 mt-1">The Lean Canvas for CodeBhaiya</h1>
+            <p class="text-xs text-slate-500">Designed by: <strong>Sumit Kumar</strong> | Date: <strong>01/10/2026</strong> | UN SDG 4: Quality Education</p>
+          </div>
+          <a href="/static/Lean_Canvas_Final_Fixed.pdf" target="_blank" download class="px-4 py-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <i class="fa-solid fa-file-pdf"></i> Download Official PDF
+          </a>
+        </div>
+        <p class="text-xs text-slate-600">
+          Yeh official single-page Lean Canvas PDF aapke computer ke Desktop par bhi saved hai: <code>Desktop/Lean_Canvas_Final_Fixed.pdf</code>.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive JavaScript logic -->
+  <script>
+    // Tab switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white');
+        btn.classList.add('text-slate-600', 'hover:bg-slate-100');
+      });
+
+      document.getElementById(tabId).classList.remove('hidden');
+      const btnMap = {
+        'predictor-tab': 'tab-btn-predictor',
+        'pytorch-tab': 'tab-btn-pytorch',
+        'debugger-tab': 'tab-btn-debugger',
+        'interview-tab': 'tab-btn-interview',
+        'blueprint-tab': 'tab-btn-blueprint'
+      };
+      const activeBtn = document.getElementById(btnMap[tabId]);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-indigo-600', 'text-white');
+        activeBtn.classList.remove('text-slate-600', 'hover:bg-slate-100');
+      }
+    }
+
+    // Module 1: ML Placement Predictor
+    async function updatePrediction() {
+      const cgpa = parseFloat(document.getElementById('input-cgpa').value);
+      const dsa = parseInt(document.getElementById('input-dsa').value);
+      const projects = parseInt(document.getElementById('input-projects').value);
+      const internships = parseInt(document.getElementById('input-internships').value);
+      const backlogs = parseInt(document.getElementById('input-backlogs').value);
+
+      document.getElementById('val-cgpa').innerText = cgpa.toFixed(1);
+      document.getElementById('val-dsa').innerText = dsa;
+      document.getElementById('val-projects').innerText = projects;
+      document.getElementById('val-internships').innerText = internships;
+      document.getElementById('val-backlogs').innerText = backlogs;
+
+      try {
+        const res = await fetch('/api/ml/predict-placement', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ cgpa, dsa_solved: dsa, projects, internships, backlogs })
+        });
+        const data = (await res.json()).result;
+
+        document.getElementById('res-prob').innerText = data.placement_probability;
+        document.getElementById('res-salary').innerText = data.expected_salary_lpa;
+        document.getElementById('res-range').innerText = data.salary_range;
+        document.getElementById('res-tier').innerText = data.tier_category;
+
+        // Render Feature Importance Bars
+        const container = document.getElementById('feature-bars-container');
+        container.innerHTML = Object.entries(data.feature_impacts).map(([feat, pct]) => `
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="font-medium text-slate-700">${feat}</span>
+              <span class="font-bold text-slate-900">${pct}%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-indigo-600 h-1.5 rounded-full" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `).join('');
+
+        // Action Plan
+        document.getElementById('res-action-plan').innerHTML = data.ai_action_plan.map(plan => `
+          <li>${plan}</li>
+        `).join('');
+
+      } catch (e) {
+        console.error("Predict error", e);
+      }
+    }
+
+    function setProfilePreset(type) {
+      if (type === 'beginner') {
+        document.getElementById('input-cgpa').value = 6.8;
+        document.getElementById('input-dsa').value = 40;
+        document.getElementById('input-projects').value = 1;
+        document.getElementById('input-internships').value = 0;
+        document.getElementById('input-backlogs').value = 1;
+      } else if (type === 'average') {
+        document.getElementById('input-cgpa').value = 7.8;
+        document.getElementById('input-dsa').value = 150;
+        document.getElementById('input-projects').value = 2;
+        document.getElementById('input-internships').value = 1;
+        document.getElementById('input-backlogs').value = 0;
+      } else if (type === 'pro') {
+        document.getElementById('input-cgpa').value = 8.8;
+        document.getElementById('input-dsa').value = 350;
+        document.getElementById('input-projects').value = 4;
+        document.getElementById('input-internships').value = 2;
+        document.getElementById('input-backlogs').value = 0;
+      }
+      updatePrediction();
+    }
+
+    // Module 2: Live PyTorch Model Trainer
+    async function trainPyTorchModel() {
+      const epochs = parseInt(document.getElementById('pt-epochs').value);
+      const btn = document.getElementById('btn-train-pt');
+      const statusText = document.getElementById('pt-status-text');
+      const historyContainer = document.getElementById('pt-history-container');
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Training on PyTorch...`;
+      statusText.innerText = "Executing torch.nn forward + backward pass...";
+
+      try {
+        const res = await fetch('/api/ml/train-neural-net', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ epochs, learning_rate: 0.05 })
+        });
+        const d = (await res.json()).training;
+
+        document.getElementById('pt-loss-res').innerText = d.final_loss;
+        document.getElementById('pt-acc-res').innerText = `${d.final_accuracy}%`;
+        document.getElementById('pt-weights-res').innerText = JSON.stringify(d.sample_learned_weights);
+        statusText.innerText = `Training completed (${d.epochs_trained} epochs in 120ms)`;
+
+        historyContainer.innerHTML = d.history.map(h => `
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+            <span class="font-bold text-slate-800">Epoch ${h.epoch}/${d.epochs_trained}</span>
+            <div class="flex items-center gap-4">
+              <span class="text-orange-600 font-semibold">Loss: ${h.loss}</span>
+              <span class="text-emerald-600 font-bold">Accuracy: ${h.accuracy}%</span>
+            </div>
+          </div>
+        `).join('');
+
+      } catch (e) {
+        alert("Error executing PyTorch training loop");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-play"></i> Train Neural Net Live`;
+      }
+    }
+
+    // Module 3: Debugger & AST
+    const samples = {
+      indexerror: {
+        code: "students = ['Aman', 'Priya', 'Rahul']\nfor i in range(len(students) + 1):\n    print('Name:', students[i])",
+        err: "IndexError: list index out of range"
+      },
+      shape: {
+        code: "import numpy as np\nA = np.array([[1, 2], [3, 4], [5, 6]]) # (3, 2)\nB = np.array([[1, 2, 3], [4, 5, 6]])    # (2, 3)\n# Shape mismatch on wrong axis\noutput = np.dot(A, B.T)",
+        err: "ValueError: shapes (3,2) and (3,2) not aligned"
+      },
+      indent: {
+        code: "def calculate_marks(total):\navg = total / 5\nreturn avg",
+        err: "IndentationError: expected an indented block"
+      }
+    };
+
+    function loadSample(key) {
+      if (samples[key]) {
+        document.getElementById('code-input').value = samples[key].code;
+        document.getElementById('error-input').value = samples[key].err;
+      }
+    }
+
+    async function debugAndAnalyzeCode() {
+      const code = document.getElementById('code-input').value;
+      const err = document.getElementById('error-input').value;
+
+      try {
+        const res = await fetch('/api/debug', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code, error_message: err, language: 'python' })
+        });
+        const data = (await res.json()).data;
+
+        document.getElementById('diag-title').innerText = data.bug_type;
+        document.getElementById('diag-expl').innerText = data.explanation;
+        document.getElementById('diag-analogy').innerText = `"${data.desi_analogy}"`;
+        document.getElementById('diag-code').innerText = data.corrected_code;
+        document.getElementById('diag-complexity').innerText = `M = ${data.ast_complexity}`;
+        document.getElementById('ast-badge').innerText = `Complexity: ${data.ast_complexity}`;
+
+      } catch (e) {
+        alert("Debugger error");
+      }
+    }
+
+    async function runCode() {
+      const code = document.getElementById('code-input').value;
+      const out = document.getElementById('console-output');
+      out.innerText = "Running in isolated Python process...";
+
+      try {
+        const res = await fetch('/api/run', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code, language: 'python' })
+        });
+        const data = await res.json();
+        out.innerText = data.output;
+      } catch (e) {
+        out.innerText = "Execution failed";
+      }
+    }
+
+    // Module 4: NLP Interview Scorer
+    async function scoreNLPInterview() {
+      const topic = document.getElementById('nlp-topic').value;
+      const ans = document.getElementById('nlp-answer-input').value;
+      const btn = document.getElementById('btn-nlp-score');
+
+      if (!ans.trim()) {
+        alert("Please write your answer!");
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Calculating TF-IDF Vector...`;
+
+      try {
+        const res = await fetch('/api/ml/nlp-interview', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic, answer: ans })
+        });
+        const d = (await res.json()).nlp_score;
+
+        document.getElementById('nlp-sim-res').innerText = `${d.semantic_similarity_percentage}%`;
+        document.getElementById('nlp-score-res').innerText = `${d.score_out_of_10} / 10`;
+        
+        const badge = document.getElementById('nlp-verdict-badge');
+        badge.innerText = d.is_selected ? "Candidate Selected" : "Needs Review";
+        badge.className = `px-2 py-0.5 rounded text-[10px] font-bold ${d.is_selected ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}`;
+
+        document.getElementById('nlp-matched-chips').innerHTML = d.matched_technical_keywords.length > 0 ? 
+          d.matched_technical_keywords.map(w => `<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded border border-emerald-200 text-[11px] font-bold">${w}</span>`).join('') : '<span class="text-[11px] text-slate-400">None</span>';
+
+        document.getElementById('nlp-missing-chips').innerHTML = d.missing_key_concepts.length > 0 ?
+          d.missing_key_concepts.map(w => `<span class="px-2 py-0.5 bg-rose-50 text-rose-700 rounded border border-rose-200 text-[11px] font-bold">${w}</span>`).join('') : '<span class="text-[11px] text-slate-400">None</span>';
+
+      } catch (e) {
+        alert("NLP error");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-chart-pie"></i> Calculate TF-IDF Semantic Score`;
+      }
+    }
+
+    // Init on load
+    window.addEventListener('DOMContentLoaded', () => {
+      updatePrediction();
+    });
+  </script>
+
+</body>
+</html>
