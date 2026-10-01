@@ -17,6 +17,12 @@ license: mit
 
 ---
 
+### 🌐 Live Production Demo
+- **Live Web Application:** [https://codebhaiya.onrender.com](https://codebhaiya.onrender.com)
+- **Status:** 🟢 Operational (FastAPI + PyTorch + Scikit-Learn Engines)
+
+---
+
 ## 🌟 Overview & Key Features
 
 1. **Scikit-Learn Placement Probability & CTC Predictor:**
